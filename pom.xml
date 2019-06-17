@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.skava.enablement</groupId>
+  <artifactId>first-api</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>First API project</name>
+  <description>First Skava API project using SDK and JWT</description>
+  <properties>
+  <java.version>1.8</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <spring-web-version>4.3.9.RELEASE</spring-web-version>
+    <spring-web-version>4.3.9.RELEASE</spring-web-version>
+    <jackson-version>2.9.9</jackson-version>
+    <jackson-threetenbp-version>2.6.4</jackson-threetenbp-version>
+</properties>
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+	<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+	</dependency>
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>4.3.9.RELEASE</version>
+ </dependency>
+ <dependency>
+    <groupId>org.springframework.security</groupId>
+    <artifactId>spring-security-core</artifactId>
+    <version>5.1.5.RELEASE</version>
+</dependency>
+     <dependency>
+      <groupId>com.skava</groupId>
+      <artifactId>skava-pricing-sdk</artifactId>
+      <version>8.2.0-beta</version>
+    </dependency>
+     <dependency>
+      <groupId>com.skava</groupId>
+      <artifactId>skava-user-sdk</artifactId>
+      <version>8.2.0-beta</version>
+    </dependency>
+    <dependency>
+      <groupId>com.skava</groupId>
+      <artifactId>skava-inventory-sdk</artifactId>
+      <version>8.2.0-beta</version>
+    </dependency>
+    <dependency>
+      <groupId>com.skava</groupId>
+      <artifactId>skava-catalog-sdk</artifactId>
+      <version>8.2.0-beta</version>
+    </dependency>
+    <dependency>
+     <groupId>org.apache.httpcomponents</groupId>
+     <artifactId>httpclient</artifactId>
+     <version>4.5.6</version>
+   </dependency>
+   <dependency>
+     <groupId>org.apache.httpcomponents</groupId>
+     <artifactId>fluent-hc</artifactId>
+     <version>4.5.6</version>
+   </dependency>
+   <!-- JSON processing: jackson -->
+
+   <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+   <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.5</version>
+   </dependency>  
+   <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+   <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt</artifactId>
+      <version>0.9.0</version>
+    </dependency>
+       <!-- JSON processing: jackson -->
+   <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson-version}</version>
+   </dependency>
+   <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson-version}</version>
+   </dependency>
+   <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson-version}</version>
+   </dependency>
+   <dependency>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <artifactId>jackson-jaxrs-json-provider</artifactId>
+      <version>${jackson-version}</version>
+    </dependency>
+    <dependency>
+       <groupId>com.github.joschi.jackson</groupId>
+       <artifactId>jackson-datatype-threetenbp</artifactId>
+       <version>${jackson-threetenbp-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.unbescape</groupId>
+      <artifactId>unbescape</artifactId>
+      <version>1.1.6.RELEASE</version>
+   </dependency>
+</dependencies>
+</project>
