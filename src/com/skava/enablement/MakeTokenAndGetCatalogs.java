@@ -4,11 +4,9 @@
  * This code is provided on an as-is basis for the illustration of invoking the Skava API. It is not warranted to be fit for any other purpose. 
  * This code is not optimized for production purposes. 
  *  
- * 
- */
-package skava.enablement.firstapi;
-
-
+ */ 
+ 
+package com.skava.enablement;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Date;

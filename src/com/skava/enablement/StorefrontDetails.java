@@ -1,4 +1,4 @@
-package skava.enablement.firstapi;
+package com.skava.enablement;
 
 import java.io.BufferedReader;
 import java.io.IOException;
