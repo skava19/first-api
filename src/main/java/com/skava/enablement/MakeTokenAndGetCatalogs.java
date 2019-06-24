@@ -83,12 +83,12 @@ public class MakeTokenAndGetCatalogs {
 	 * @return
 	 */
 	
-	public static String generateJWT(String sharedSecret) {
+	public static String generateJWT(String sharedSecret, String bidString) {
 
 		String userid = "xxx";
 		Map<String, Object> claims = new HashMap<String, Object>();
 		claims.put("authorities",
-				"[{\"roles\":{\"ROLE_BUSINESS_ADMIN\":{\"business\":{\"50\":{}},\"type\":\"STANDARD\"}}}]");
+			"[{\"roles\":{\"ROLE_BUSINESS_ADMIN\":{\"business\":{\""+ bidString +"\":{}},\"type\":\"STANDARD\"}}}]");
 		claims.put("username", userid);
 		claims.put("created", Long.valueOf(System.currentTimeMillis()));
 		Gson gson = new Gson();
@@ -131,11 +131,6 @@ public class MakeTokenAndGetCatalogs {
 		String instance = "stratus.skavacommerce.com";
 		System.out.println("Enter Shared Secret : ");
 		String sharedSecret = scan.nextLine();
-		String authToken = generateJWT(sharedSecret);
-		sfd.setAuthToken(authToken);
-		System.out.println("Enter api key:");
-		String apiKey = scan.nextLine();
-		
 		System.out.println("enter business:[50]");
 		String businessId = scan.nextLine();
 		if (businessId.equals("")) {
@@ -143,6 +138,12 @@ public class MakeTokenAndGetCatalogs {
 		}
 		long bid = new Long(businessId);
 		sfd.setBusiness(bid);
+		String authToken = generateJWT(sharedSecret,businessId);
+		sfd.setAuthToken(authToken);
+		System.out.println("Enter api key:");
+		String apiKey = scan.nextLine();
+		
+		
 		System.out.println("Enter collection[268]:");
 		String collection = scan.nextLine();
 		if (collection.equals("")) {
